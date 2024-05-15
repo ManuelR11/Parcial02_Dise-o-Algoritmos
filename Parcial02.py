@@ -29,7 +29,7 @@ def run_algorithms_with_data_sizes(data_sizes):
 
         # Support Vector Machines (SVMs)
         start_time = time.time()
-        svm_model = SVC()
+        svm_model = SVC(kernel='linear')
         svm_model.fit(X_train, y_train)
         svm_training_time = time.time() - start_time
         svm_training_times.append(svm_training_time)
